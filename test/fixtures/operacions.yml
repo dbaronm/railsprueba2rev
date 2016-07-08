@@ -1,0 +1,10 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  trabajador_id: 1
+
+two:
+  trabajador_id: 1
+
+three:
+  trabajador_id: 1
