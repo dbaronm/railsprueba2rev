@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: prueba2_david_development
+
+test:
+  <<: *default
+  database: prueba2_david_test
+
+production:
+  <<: *default
+  database: prueba2_david_production
+  username: examen
+  password: <%= ENV['EXAMEN_DATABASE_PASSWORD'] %>
