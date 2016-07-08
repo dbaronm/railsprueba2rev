@@ -5,14 +5,14 @@ default: &default
 
 development:
   <<: *default
-  database: prueba2_david_development
+  database: prueba2rev_david_development
 
 test:
   <<: *default
-  database: prueba2_david_test
+  database: prueba2rev_david_test
 
 production:
   <<: *default
-  database: prueba2_david_production
+  database: prueba2rev_david_production
   username: examen
   password: <%= ENV['EXAMEN_DATABASE_PASSWORD'] %>
