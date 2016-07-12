@@ -5,4 +5,8 @@ class Inventario < ActiveRecord::Base
 	end
 	}
 	scope :disponibles, -> {where(operacion_id: nil)}
+	after_destroy :borrar
+	def borrar
+		Registro.create(descripcion: "La pieza con numero de serie #{serie} ha sido borrada")
+	end
 end
