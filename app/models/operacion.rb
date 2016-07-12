@@ -1,5 +1,5 @@
 class Operacion < ActiveRecord::Base
-	has_one :inventario
+	has_one :inventario, dependent: :destroy
   belongs_to :trabajador
   	scope :operacion_5, -> {order("id desc").limit(5)}
 
